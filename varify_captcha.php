@@ -9,7 +9,7 @@ $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteve
 $responseData = json_decode($verifyResponse);
 
 $message = !empty($responseData->success) 
-              ? "g-recaptcha varified successfully";
+              ? "g-recaptcha varified successfully"
               : "Some error in vrifying g-recaptcha";
 echo $message;
 ?>
